@@ -46,6 +46,21 @@
           "build/net35/NUnit3TestAdapter.props": {}
         }
       },
+      "Selenium.Support/4.10.0": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "4.10.0"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net48/WebDriver.Support.dll": {}
+        },
+        "runtime": {
+          "lib/net48/WebDriver.Support.dll": {}
+        }
+      },
       "Selenium.WebDriver/4.10.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -172,6 +187,26 @@
         "nunit3testadapter.nuspec"
       ]
     },
+    "Selenium.Support/4.10.0": {
+      "sha512": "S/7nH+SMiCaut5C6kmMVxq4mCcmvwboPvPqdpx2/Dfwi2O9bFQb+psJC4ZcpvPMg7FCnrC1i6uZW6rthjSo1TQ==",
+      "type": "package",
+      "path": "selenium.support/4.10.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/icon.png",
+        "lib/net45/WebDriver.Support.dll",
+        "lib/net46/WebDriver.Support.dll",
+        "lib/net47/WebDriver.Support.dll",
+        "lib/net48/WebDriver.Support.dll",
+        "lib/net5.0/WebDriver.Support.dll",
+        "lib/net6.0/WebDriver.Support.dll",
+        "lib/netstandard2.0/WebDriver.Support.dll",
+        "lib/netstandard2.1/WebDriver.Support.dll",
+        "selenium.support.4.10.0.nupkg.sha512",
+        "selenium.support.nuspec"
+      ]
+    },
     "Selenium.WebDriver/4.10.0": {
       "sha512": "MvgUaxeLqLOtRnNS+kHzqfOhLO+7ZEukhQMuS7ksQQPA2tGNXWhrRN3PTkTGuKhuodd9JkoZ4eCKVEQF6xPdmA==",
       "type": "package",
@@ -203,6 +238,7 @@
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "NUnit >= 3.12.0",
       "NUnit3TestAdapter >= 3.16.1",
+      "Selenium.Support >= 4.10.0",
       "Selenium.WebDriver >= 4.10.0"
     ]
   },
@@ -256,6 +292,10 @@
           "NUnit3TestAdapter": {
             "target": "Package",
             "version": "[3.16.1, )"
+          },
+          "Selenium.Support": {
+            "target": "Package",
+            "version": "[4.10.0, )"
           },
           "Selenium.WebDriver": {
             "target": "Package",
