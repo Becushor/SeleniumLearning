@@ -10,9 +10,11 @@ using WebDriverManager.DriverConfigs.Impl;
 namespace SeleniumCSharpNetCoreTry1.Hooks
 {
     [Binding]
-    public sealed class Hooks1 : DriverHelper
+    public sealed class Hooks1
     {
-        // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
+        private DriverHelper _driverHelper;
+
+        public Hooks1(DriverHelper driverHelper) => _driverHelper = driverHelper;
 
         [BeforeScenario]
         public void BeforeScenario()
@@ -23,13 +25,13 @@ namespace SeleniumCSharpNetCoreTry1.Hooks
 
             new DriverManager().SetUpDriver(new ChromeConfig());
             Console.WriteLine("Setup");
-            driver = new ChromeDriver(option);
+            _driverHelper.Driver = new ChromeDriver(option);
         }
 
         [AfterScenario]
         public void AfterScenario()
         {
-            driver.Quit();
+            _driverHelper.Driver.Quit();
         }
     }
 }

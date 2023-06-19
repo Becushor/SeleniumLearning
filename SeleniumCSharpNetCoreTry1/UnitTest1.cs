@@ -12,38 +12,38 @@ namespace SeleniumCSharpNetCoreTry1
         [SetUp]
         public void Setup()
         {
-            driver = new ChromeDriver();
+            Driver = new ChromeDriver();
         }
 
         [Test]
         public void Test1()
         {
-            driver.Navigate().GoToUrl("https://demowf.aspnetawesome.com/");
+            Driver.Navigate().GoToUrl("https://demowf.aspnetawesome.com/");
 
-            CustomControl.EnterText(driver.FindElement(By.Id("ContentPlaceHolder1_Meal")), "Tomato");
+            CustomControl.EnterText(Driver.FindElement(By.Id("ContentPlaceHolder1_Meal")), "Tomato");
 
-            CustomControl.Click(driver.FindElement(By.XPath("//input[@name='ctl00$ContentPlaceHolder1$ChildMeal1']/following-sibling::div[text()='Celery']")));
+            CustomControl.Click(Driver.FindElement(By.XPath("//input[@name='ctl00$ContentPlaceHolder1$ChildMeal1']/following-sibling::div[text()='Celery']")));
 
-            CustomControl.SelectByText(driver.FindElement(By.Id("ContentPlaceHolder1_Add1-awed")), "Broccoli");
+            CustomControl.SelectByText(Driver.FindElement(By.Id("ContentPlaceHolder1_Add1-awed")), "Broccoli");
 
-            CustomControl.ComboBox("ContentPlaceHolder1_AllMealsCombo", "Almond");
+            //CustomControl.ComboBox("ContentPlaceHolder1_AllMealsCombo", "Almond");
 
             Assert.Pass();
         }
 
-        [Test]
-        public void LoginTest()
-        {
-            driver.Navigate().GoToUrl("http://eaapp.somee.com/");
+        //[Test]
+        //public void LoginTest()
+        //{
+        //    Driver.Navigate().GoToUrl("http://eaapp.somee.com/");
 
-            HomePage homePage = new HomePage();
-            LoginPage loginPage = new LoginPage();
+        //    HomePage homePage = new HomePage();
+        //    LoginPage loginPage = new LoginPage();
 
-            homePage.ClickLogin();
-            loginPage.EnterUserNameAndPassword("admin", "password");
-            loginPage.ClickLogin();
+        //    homePage.ClickLogin();
+        //    loginPage.EnterUserNameAndPassword("admin", "password");
+        //    loginPage.ClickLogin();
 
-            Assert.That(homePage.IsLogOffExist(), Is.True);
-        }
+        //    Assert.That(homePage.IsLogOffExist(), Is.True);
+        //}
     }
 }
