@@ -63,3 +63,5 @@ C:\Users\User\Documents\GitHub\SeleniumLearning\SeleniumCSharpNetCoreTry1\bin\De
 C:\Users\User\Documents\GitHub\SeleniumLearning\SeleniumCSharpNetCoreTry1\bin\Debug\net48\System.ValueTuple.dll
 C:\Users\User\Documents\GitHub\SeleniumLearning\SeleniumCSharpNetCoreTry1\bin\Debug\net48\WebDriverManager.dll
 C:\Users\User\Documents\GitHub\SeleniumLearning\SeleniumCSharpNetCoreTry1\obj\Debug\net48\SeleniumCSharpNetCoreTry1.dll.config
+C:\Users\User\Documents\GitHub\SeleniumLearning\SeleniumCSharpNetCoreTry1\bin\Debug\net48\LivingDoc.Dtos.dll
+C:\Users\User\Documents\GitHub\SeleniumLearning\SeleniumCSharpNetCoreTry1\bin\Debug\net48\LivingDoc.SpecFlowPlugin.dll
